@@ -10,9 +10,11 @@ repositories {
 
 dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
-    implementation 'io.quarkus:quarkus-resteasy'
-    implementation 'io.quarkus:quarkus-resteasy-jackson'
+    implementation 'io.quarkus:quarkus-resteasy-reactive'
+    implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
+    implementation 'io.quarkus:quarkus-mutiny'
     implementation 'io.quarkus:quarkus-amazon-sqs'
+    implementation 'io.quarkus:quarkus-amazon-dynamodb'
     implementation 'software.amazon.awssdk:url-connection-client'
     implementation 'io.quarkus:quarkus-arc'
     implementation 'org.jboss.logging:jboss-logging'
