@@ -9,6 +9,7 @@ provider "aws" {
   endpoints {
     sqs      = "http://localhost:4566"
     dynamodb = "http://localhost:4566"
+    s3       = "http://localhost:4566"
   }
 }
 
@@ -37,4 +38,9 @@ resource "aws_dynamodb_table" "dynamodb-table" {
     name = "Name"
     type = "S"
   }
+}
+
+resource "aws_s3_bucket" "s3-bucket" {
+  bucket = "my-bucket"
+  acl    = "private"
 }
